@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:todo_app/screens/constants.dart';
+import 'package:todo_app/screens/widgets/task_list.dart';
 
 class TasksScreen extends StatelessWidget {
   TasksScreen();
@@ -64,6 +63,7 @@ class TasksScreen extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 0.025 * width),
                 decoration: BoxDecoration(
                   color: secondaryColor,
                   borderRadius: BorderRadius.only(
@@ -71,6 +71,7 @@ class TasksScreen extends StatelessWidget {
                     topRight: Radius.circular(0.1 * width),
                   ),
                 ),
+                child: TaskList(),
               ),
             ),
           ],
